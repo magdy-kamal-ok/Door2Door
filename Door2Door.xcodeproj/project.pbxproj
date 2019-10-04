@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04CC5656234812040069D65D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5655234812040069D65D /* AppDelegate.swift */; };
-		04CC5658234812040069D65D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5657234812040069D65D /* ViewController.swift */; };
-		04CC565B234812040069D65D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC5659234812040069D65D /* Main.storyboard */; };
 		04CC565D234812060069D65D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC565C234812060069D65D /* Assets.xcassets */; };
 		04CC5660234812060069D65D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC565E234812060069D65D /* LaunchScreen.storyboard */; };
 		04CC566B234812060069D65D /* Door2DoorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC566A234812060069D65D /* Door2DoorTests.swift */; };
@@ -35,9 +32,6 @@
 
 /* Begin PBXFileReference section */
 		04CC5652234812040069D65D /* Door2Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Door2Door.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		04CC5655234812040069D65D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04CC5657234812040069D65D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04CC565A234812040069D65D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04CC565C234812060069D65D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CC565F234812060069D65D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04CC5661234812060069D65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,9 +91,6 @@
 		04CC5654234812040069D65D /* Door2Door */ = {
 			isa = PBXGroup;
 			children = (
-				04CC5655234812040069D65D /* AppDelegate.swift */,
-				04CC5657234812040069D65D /* ViewController.swift */,
-				04CC5659234812040069D65D /* Main.storyboard */,
 				04CC565C234812060069D65D /* Assets.xcassets */,
 				04CC565E234812060069D65D /* LaunchScreen.storyboard */,
 				04CC5661234812060069D65D /* Info.plist */,
@@ -231,7 +222,6 @@
 			files = (
 				04CC5660234812060069D65D /* LaunchScreen.storyboard in Resources */,
 				04CC565D234812060069D65D /* Assets.xcassets in Resources */,
-				04CC565B234812040069D65D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +246,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04CC5658234812040069D65D /* ViewController.swift in Sources */,
-				04CC5656234812040069D65D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +281,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04CC5659234812040069D65D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04CC565A234812040069D65D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04CC565E234812060069D65D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -467,7 +447,6 @@
 		04CC567E234812060069D65D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
@@ -488,7 +467,6 @@
 		04CC567F234812060069D65D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
@@ -509,7 +487,6 @@
 		04CC5681234812060069D65D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2DoorUITests/Info.plist;
@@ -529,7 +506,6 @@
 		04CC5682234812060069D65D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2DoorUITests/Info.plist;
