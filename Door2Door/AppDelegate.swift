@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        openGithubViewController()
+        openBookingViewController()
         
         return true
     }
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate
 {
-    func openGithubViewController()
+    func openBookingViewController()
     {
         
         let viewController  = BookingBuilder.viewController()

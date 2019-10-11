@@ -60,7 +60,8 @@ class BookingViewController: UIViewController {
             .output
             .bookingStatus
             .map{$0.isEmpty}
-            .subscribe(onNext: { (status) in
+            .subscribe(onNext: { [weak self](status) in
+                guard let self = self else {return}
                 if status
                 {
                     self.removeAllAnnotations()
@@ -212,6 +213,8 @@ class BookingViewController: UIViewController {
                 
                 mapView?.addAnnotation(vehicleAnnotation)
                 UIView.animate(withDuration: 1.5, animations: {
+                    [weak self] in
+                    guard let self = self else{return}
                     self.vehicleAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: vehicleLocation.latitude, longitude: vehicleLocation.longitude)
                     self.vehicleAnnotation.bearing = vehicleLocation.bearing
                     self.mapView.adjustMapZoomToAnnotaionsLocations(animated: true)
@@ -274,7 +277,7 @@ extension BookingViewController: MKMapViewDelegate {
     
     func removeAllAnnotations() {
         let annotations = mapView.annotations.filter {
-            $0 !== self.pickupAnnotation || $0 !== self.dropOffAnnotation
+            $0 !== self.pickupAnnotation
         }
         mapView.removeAnnotations(annotations)
     }
