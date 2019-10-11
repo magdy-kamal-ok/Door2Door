@@ -7,16 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042670F823498BF4003F5D46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042670F723498BF4003F5D46 /* AppDelegate.swift */; };
 		04CC565D234812060069D65D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04CC565C234812060069D65D /* Assets.xcassets */; };
 		04CC5660234812060069D65D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04CC565E234812060069D65D /* LaunchScreen.storyboard */; };
 		04CC566B234812060069D65D /* Door2DoorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC566A234812060069D65D /* Door2DoorTests.swift */; };
 		04CC5676234812060069D65D /* Door2DoorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC5675234812060069D65D /* Door2DoorUITests.swift */; };
-		3CA38ADEF46D2DF41619BE59 /* Pods_Door2Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46B1A57743A48A537287BC14 /* Pods_Door2Door.framework */; };
-		454D35066CAC1A05C62525B7 /* Pods_Door2DoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9192DE021646654A360150BC /* Pods_Door2DoorTests.framework */; };
-		B0A0D59D6745E27B3F612251 /* Pods_Door2DoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 653E71165CC578BB0CDDAD93 /* Pods_Door2DoorUITests.framework */; };
+		1DA3E0517954A66F604905AA /* Pods_Door2Door.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8E2CC992048E1D8D345A78 /* Pods_Door2Door.framework */; };
+		2170FE83C826D822608A05A4 /* Pods_Door2DoorUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D144BACF211A3D7436527E3 /* Pods_Door2DoorUITests.framework */; };
+		BEE53C8AA8540E6613527390 /* Pods_Door2DoorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B82EB9FB22D3198471CE22 /* Pods_Door2DoorTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0426723E234A5870003F5D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04267239234A586F003F5D46 /* NetworkManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0426721F234A586F003F5D46;
+			remoteInfo = NetworkManager;
+		};
+		04267240234A5870003F5D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04267239234A586F003F5D46 /* NetworkManager.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04267228234A586F003F5D46;
+			remoteInfo = NetworkManagerTests;
+		};
+		042672A5234A5A6D003F5D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042672A0234A5A6C003F5D46 /* Booking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 04267286234A5A6C003F5D46;
+			remoteInfo = Booking;
+		};
+		042672A7234A5A6D003F5D46 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 042672A0234A5A6C003F5D46 /* Booking.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0426728F234A5A6C003F5D46;
+			remoteInfo = BookingTests;
+		};
 		04CC5667234812060069D65D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 04CC564A234812040069D65D /* Project object */;
@@ -31,23 +60,13 @@
 			remoteGlobalIDString = 04CC5651234812040069D65D;
 			remoteInfo = Door2Door;
 		};
-		04CC573E234830FB0069D65D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04CC5739234830FA0069D65D /* Network-lib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 04CC571F234830FA0069D65D;
-			remoteInfo = "Network-lib";
-		};
-		04CC5740234830FB0069D65D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04CC5739234830FA0069D65D /* Network-lib.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 04CC5728234830FA0069D65D;
-			remoteInfo = "Network-libTests";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042670F223498BF3003F5D46 /* Door2Door-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Door2Door-Bridging-Header.h"; sourceTree = "<group>"; };
+		042670F723498BF4003F5D46 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04267239234A586F003F5D46 /* NetworkManager.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = NetworkManager.xcodeproj; path = NetworkManager/NetworkManager.xcodeproj; sourceTree = "<group>"; };
+		042672A0234A5A6C003F5D46 /* Booking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Booking.xcodeproj; path = Booking/Booking.xcodeproj; sourceTree = "<group>"; };
 		04CC5652234812040069D65D /* Door2Door.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Door2Door.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC565C234812060069D65D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04CC565F234812060069D65D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,15 +77,14 @@
 		04CC5671234812060069D65D /* Door2DoorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Door2DoorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04CC5675234812060069D65D /* Door2DoorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Door2DoorUITests.swift; sourceTree = "<group>"; };
 		04CC5677234812060069D65D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		04CC5739234830FA0069D65D /* Network-lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Network-lib.xcodeproj"; path = "Network-lib/Network-lib.xcodeproj"; sourceTree = "<group>"; };
+		1D144BACF211A3D7436527E3 /* Pods_Door2DoorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2DoorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D8E2CC992048E1D8D345A78 /* Pods_Door2Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		457A8A4835C68036ADE4EB09 /* Pods-Door2DoorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2DoorTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door2DoorTests/Pods-Door2DoorTests.debug.xcconfig"; sourceTree = "<group>"; };
-		46B1A57743A48A537287BC14 /* Pods_Door2Door.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2Door.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B62E7B7489529F75BB48F2A /* Pods-Door2Door.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2Door.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door.release.xcconfig"; sourceTree = "<group>"; };
-		653E71165CC578BB0CDDAD93 /* Pods_Door2DoorUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2DoorUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B1C4F8AE3CF96E08FA82AFC /* Pods-Door2DoorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2DoorTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door2DoorTests/Pods-Door2DoorTests.release.xcconfig"; sourceTree = "<group>"; };
 		8BCF61A76CBACA3B2C1AEE0B /* Pods-Door2DoorUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2DoorUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door2DoorUITests/Pods-Door2DoorUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9192DE021646654A360150BC /* Pods_Door2DoorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2DoorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5B4F42AFB71D2DB5FD0FBAF /* Pods-Door2DoorUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2DoorUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Door2DoorUITests/Pods-Door2DoorUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7B82EB9FB22D3198471CE22 /* Pods_Door2DoorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Door2DoorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4E9EBB5A8781CECD995FC3B /* Pods-Door2Door.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Door2Door.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,7 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3CA38ADEF46D2DF41619BE59 /* Pods_Door2Door.framework in Frameworks */,
+				1DA3E0517954A66F604905AA /* Pods_Door2Door.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				454D35066CAC1A05C62525B7 /* Pods_Door2DoorTests.framework in Frameworks */,
+				BEE53C8AA8540E6613527390 /* Pods_Door2DoorTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,13 +109,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0A0D59D6745E27B3F612251 /* Pods_Door2DoorUITests.framework in Frameworks */,
+				2170FE83C826D822608A05A4 /* Pods_Door2DoorUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0426723A234A586F003F5D46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0426723F234A5870003F5D46 /* NetworkManager.framework */,
+				04267241234A5870003F5D46 /* NetworkManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		042672A1234A5A6C003F5D46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				042672A6234A5A6D003F5D46 /* Booking.framework */,
+				042672A8234A5A6D003F5D46 /* BookingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		04CC5649234812040069D65D = {
 			isa = PBXGroup;
 			children = (
@@ -123,12 +159,14 @@
 		04CC5654234812040069D65D /* Door2Door */ = {
 			isa = PBXGroup;
 			children = (
+				042670F723498BF4003F5D46 /* AppDelegate.swift */,
 				04CC5714234830C50069D65D /* Core */,
 				04CC568523482EE90069D65D /* Common */,
 				04CC5683234816D30069D65D /* Features */,
 				04CC565C234812060069D65D /* Assets.xcassets */,
 				04CC565E234812060069D65D /* LaunchScreen.storyboard */,
 				04CC5661234812060069D65D /* Info.plist */,
+				042670F223498BF3003F5D46 /* Door2Door-Bridging-Header.h */,
 			);
 			path = Door2Door;
 			sourceTree = "<group>";
@@ -154,6 +192,7 @@
 		04CC5683234816D30069D65D /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				042672A0234A5A6C003F5D46 /* Booking.xcodeproj */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -168,18 +207,9 @@
 		04CC5714234830C50069D65D /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04CC5739234830FA0069D65D /* Network-lib.xcodeproj */,
+				04267239234A586F003F5D46 /* NetworkManager.xcodeproj */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		04CC573A234830FA0069D65D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				04CC573F234830FB0069D65D /* Network_lib.framework */,
-				04CC5741234830FB0069D65D /* Network-libTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		1FEDFC9C9FB913B02DF8D559 /* Pods */ = {
@@ -198,9 +228,9 @@
 		CE5BD3BDFCE5854B4088280C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				46B1A57743A48A537287BC14 /* Pods_Door2Door.framework */,
-				9192DE021646654A360150BC /* Pods_Door2DoorTests.framework */,
-				653E71165CC578BB0CDDAD93 /* Pods_Door2DoorUITests.framework */,
+				3D8E2CC992048E1D8D345A78 /* Pods_Door2Door.framework */,
+				A7B82EB9FB22D3198471CE22 /* Pods_Door2DoorTests.framework */,
+				1D144BACF211A3D7436527E3 /* Pods_Door2DoorUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -216,7 +246,7 @@
 				04CC564E234812040069D65D /* Sources */,
 				04CC564F234812040069D65D /* Frameworks */,
 				04CC5650234812040069D65D /* Resources */,
-				F71E19C4EA5CD9E4219A18CD /* [CP] Embed Pods Frameworks */,
+				3E13F3852B600F77185F9CAB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +307,12 @@
 				TargetAttributes = {
 					04CC5651234812040069D65D = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					04CC5665234812060069D65D = {
 						CreatedOnToolsVersion = 10.3;
@@ -301,8 +337,12 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 04CC573A234830FA0069D65D /* Products */;
-					ProjectRef = 04CC5739234830FA0069D65D /* Network-lib.xcodeproj */;
+					ProductGroup = 042672A1234A5A6C003F5D46 /* Products */;
+					ProjectRef = 042672A0234A5A6C003F5D46 /* Booking.xcodeproj */;
+				},
+				{
+					ProductGroup = 0426723A234A586F003F5D46 /* Products */;
+					ProjectRef = 04267239234A586F003F5D46 /* NetworkManager.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -315,18 +355,32 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		04CC573F234830FB0069D65D /* Network_lib.framework */ = {
+		0426723F234A5870003F5D46 /* NetworkManager.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = Network_lib.framework;
-			remoteRef = 04CC573E234830FB0069D65D /* PBXContainerItemProxy */;
+			path = NetworkManager.framework;
+			remoteRef = 0426723E234A5870003F5D46 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		04CC5741234830FB0069D65D /* Network-libTests.xctest */ = {
+		04267241234A5870003F5D46 /* NetworkManagerTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "Network-libTests.xctest";
-			remoteRef = 04CC5740234830FB0069D65D /* PBXContainerItemProxy */;
+			path = NetworkManagerTests.xctest;
+			remoteRef = 04267240234A5870003F5D46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		042672A6234A5A6D003F5D46 /* Booking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Booking.framework;
+			remoteRef = 042672A5234A5A6D003F5D46 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		042672A8234A5A6D003F5D46 /* BookingTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BookingTests.xctest;
+			remoteRef = 042672A7234A5A6D003F5D46 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -358,6 +412,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3E13F3852B600F77185F9CAB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A30770DA7E129BE876AF01F2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,34 +506,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F71E19C4EA5CD9E4219A18CD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxRelay-iOS/RxRelay.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream-iOS/Starscream.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Door2Door/Pods-Door2Door-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -459,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042670F823498BF4003F5D46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +681,7 @@
 			baseConfigurationReference = C4E9EBB5A8781CECD995FC3B /* Pods-Door2Door.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2Door/Info.plist;
@@ -635,6 +691,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ownprojects.Door2Door;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Door2Door/Door2Door-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -645,6 +703,7 @@
 			baseConfigurationReference = 5B62E7B7489529F75BB48F2A /* Pods-Door2Door.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2Door/Info.plist;
@@ -654,6 +713,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ownprojects.Door2Door;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Door2Door/Door2Door-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -663,6 +723,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 457A8A4835C68036ADE4EB09 /* Pods-Door2DoorTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
@@ -684,6 +745,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8B1C4F8AE3CF96E08FA82AFC /* Pods-Door2DoorTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
@@ -705,6 +767,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BCF61A76CBACA3B2C1AEE0B /* Pods-Door2DoorUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2DoorUITests/Info.plist;
@@ -725,6 +788,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5B4F42AFB71D2DB5FD0FBAF /* Pods-Door2DoorUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = J685J65365;
 				INFOPLIST_FILE = Door2DoorUITests/Info.plist;

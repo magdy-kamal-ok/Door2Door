@@ -2,14 +2,13 @@
 # platform :ios, '9.0'
 
 use_frameworks!
-inhibit_all_warnings!
 workspace "Door2Door"
 
 def commonFrameworks
-
     pod 'RxSwift', '~> 5'
     pod 'RxCocoa', '~> 5'
     pod 'Starscream', '~> 3.1.0'
+
 end
 
 
@@ -30,11 +29,21 @@ target 'Door2Door' do
 
 end
 
-target 'Network-lib' do
-    project 'Door2Door/Core/Network-lib/Network-lib.xcodeproj'
+target 'NetworkManager' do
+    project 'Door2Door/Core/NetworkManager/NetworkManager.xcodeproj'
     
-    target 'Network-libTests' do
+    target 'NetworkManagerTests' do
         commonFrameworks
     end
     commonFrameworks
+end
+
+target 'Booking' do
+    project 'Door2Door/Features/Booking/Booking.xcodeproj'
+    target 'BookingTests' do
+        commonFrameworks
+    end
+    commonFrameworks
+    
+    
 end

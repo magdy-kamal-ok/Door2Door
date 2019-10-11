@@ -8,6 +8,9 @@
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Door2Door/Core/Network-lib/Network-lib.xcodeproj">
+      location = "group:Door2Door/Core/NetworkManager/NetworkManager.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Door2Door/Features/Booking/Booking.xcodeproj">
    </FileRef>
 </Workspace>
