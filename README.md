@@ -18,4 +18,4 @@ one project for Networking, the other for Booking Vehicle Events.
     3- StarScream for Live Events sent by WebSocket, especially it works in background.
     
 # Usage:
-	just download the .zip file and open Door2Door.xcworkspace, if you faced any problem just go to the project path and run command pod install.
+	just download the .zip file and open Door2Door.xcworkspace, if you faced any problem just go to the project path and run command **pod install**.
