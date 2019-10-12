@@ -48,6 +48,7 @@ class BookingViewModel {
         eventDataProvider = EventDataProvider.init(requestHandler: requestHandler)
         output = Output.init(intermediateStopLocations: self.intermediateStopLocationsSubject.asObservable(), pickupLocation: pickupLocationSubject.asObservable(), dropOffLocation: dropOffLocationSubject.asObservable(), vehicleLocation: vehicleLocationSubject.asObservable(), bookingStatus: self.bookingStatusSubject.asObservable(), activityLoader: self.activityLoaderSubject.asObservable(), bookingBtnStatus: self.bookingBtnStatusSubject.asObservable(), userInformationStatus: self.userInformationSubject.asObservable())
 
+
     }
     
 

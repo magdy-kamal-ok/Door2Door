@@ -25,6 +25,7 @@
 		04267D91234D3ED100FBB072 /* DropoffAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */; };
 		04267D93234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */; };
 		04267DAD234D5FED00FBB072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267DAC234D5FED00FBB072 /* DoubleExtension.swift */; };
+		04288A1423514BDB00CDAE06 /* AnnotaionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */; };
 		045748EF234BFB3C00DEF29B /* MapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045748EE234BFB3C00DEF29B /* MapViewExtension.swift */; };
 		13F1C31D4038F5ECDDDA5C16 /* Pods_Booking_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2313C8079B1F3BE2E447DC /* Pods_Booking_BookingTests.framework */; };
 		E317E040BAC872663A192F30 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3281426B3220454D33C43D /* Pods_Booking.framework */; };
@@ -63,6 +64,7 @@
 		04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropoffAnnotaion.swift; sourceTree = "<group>"; };
 		04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateStopAnnotaion.swift; sourceTree = "<group>"; };
 		04267DAC234D5FED00FBB072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotaionFactory.swift; sourceTree = "<group>"; };
 		045748EE234BFB3C00DEF29B /* MapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewExtension.swift; sourceTree = "<group>"; };
 		0E2DF4B98ECDD6DCDD22350E /* Pods-Booking-BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking-BookingTests/Pods-Booking-BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29FE8D986E718B96A8E4C325 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				04267D8E234D3E5000FBB072 /* PickupAnnotaion.swift */,
 				04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */,
 				04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */,
+				04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */,
 			);
 			path = CustomComponents;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				04267D91234D3ED100FBB072 /* DropoffAnnotaion.swift in Sources */,
 				042672D4234A5B42003F5D46 /* BookingStatus.swift in Sources */,
 				042672E7234AD180003F5D46 /* BookingConstants.swift in Sources */,
+				04288A1423514BDB00CDAE06 /* AnnotaionFactory.swift in Sources */,
 				04267DAD234D5FED00FBB072 /* DoubleExtension.swift in Sources */,
 				04267D8F234D3E5000FBB072 /* PickupAnnotaion.swift in Sources */,
 			);

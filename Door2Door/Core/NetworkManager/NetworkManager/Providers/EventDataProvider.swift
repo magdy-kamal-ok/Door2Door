@@ -15,10 +15,7 @@ public class EventDataProvider <R:Codable>{
     var socketManager: NetworkProtocol!
     var parser: ParserProtocol!
     let bag = DisposeBag()
-    private var subject = PublishSubject<R>()
-    public var observableResponse:Observable<R> {
-        return subject.asObservable()
-    }
+
     
     public init(requestHandler: RequstHandlerProtocol, socketManager: NetworkProtocol = StarScreamManager(), parser: ParserProtocol = CodableParser())
     {
@@ -81,7 +78,6 @@ public class EventDataProvider <R:Codable>{
     {
         if let parsedObject:R = self.parser.parseData(data: data)
         {
-            subject.onNext(parsedObject)
             return (parsedObject, nil)
         }
         else

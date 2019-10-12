@@ -21,7 +21,7 @@ public class StarScreamManager: NetworkProtocol {
             }
 
             let socket = WebSocket(url: URL(string: requestComponents.getSocketEndPoint())!)
-
+        
             socket.onDisconnect = { (error: Error?) in
                 if let error = error as? WSError {
                     var customError: ErrorModel?
@@ -55,7 +55,7 @@ public class StarScreamManager: NetworkProtocol {
             }
 
             socket.connect()
-
+           
             return Disposables.create {
                 socket.disconnect()
             }
