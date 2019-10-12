@@ -18,7 +18,6 @@
 		042672D6234A5B42003F5D46 /* BookingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042672CD234A5B42003F5D46 /* BookingViewController.xib */; };
 		042672D7234A5B42003F5D46 /* BookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042672CE234A5B42003F5D46 /* BookingViewController.swift */; };
 		042672D8234A5B42003F5D46 /* BookingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042672D0234A5B42003F5D46 /* BookingBuilder.swift */; };
-		042672DF234A68C5003F5D46 /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042672DE234A68C5003F5D46 /* NetworkManager.framework */; };
 		042672E7234AD180003F5D46 /* BookingConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042672E6234AD180003F5D46 /* BookingConstants.swift */; };
 		04267D8D234D3C2800FBB072 /* VehicleAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D8C234D3C2800FBB072 /* VehicleAnnotation.swift */; };
 		04267D8F234D3E5000FBB072 /* PickupAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D8E234D3E5000FBB072 /* PickupAnnotaion.swift */; };
@@ -26,9 +25,10 @@
 		04267D93234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */; };
 		04267DAD234D5FED00FBB072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267DAC234D5FED00FBB072 /* DoubleExtension.swift */; };
 		04288A1423514BDB00CDAE06 /* AnnotaionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */; };
+		04288A1C2351606E00CDAE06 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04288A1B2351606E00CDAE06 /* Pods_Booking.framework */; };
+		04288A1E2351607400CDAE06 /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04288A1D2351607400CDAE06 /* NetworkManager.framework */; };
 		045748EF234BFB3C00DEF29B /* MapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045748EE234BFB3C00DEF29B /* MapViewExtension.swift */; };
 		13F1C31D4038F5ECDDDA5C16 /* Pods_Booking_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2313C8079B1F3BE2E447DC /* Pods_Booking_BookingTests.framework */; };
-		E317E040BAC872663A192F30 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3281426B3220454D33C43D /* Pods_Booking.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +65,8 @@
 		04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateStopAnnotaion.swift; sourceTree = "<group>"; };
 		04267DAC234D5FED00FBB072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotaionFactory.swift; sourceTree = "<group>"; };
+		04288A1B2351606E00CDAE06 /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04288A1D2351607400CDAE06 /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045748EE234BFB3C00DEF29B /* MapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewExtension.swift; sourceTree = "<group>"; };
 		0E2DF4B98ECDD6DCDD22350E /* Pods-Booking-BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking-BookingTests/Pods-Booking-BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29FE8D986E718B96A8E4C325 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,8 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				042672DF234A68C5003F5D46 /* NetworkManager.framework in Frameworks */,
-				E317E040BAC872663A192F30 /* Pods_Booking.framework in Frameworks */,
+				04288A1E2351607400CDAE06 /* NetworkManager.framework in Frameworks */,
+				04288A1C2351606E00CDAE06 /* Pods_Booking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +222,8 @@
 		B6406DB0ED197FAEF3109ECF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04288A1D2351607400CDAE06 /* NetworkManager.framework */,
+				04288A1B2351606E00CDAE06 /* Pods_Booking.framework */,
 				042672E0234A698A003F5D46 /* Starscream.framework */,
 				042672DE234A68C5003F5D46 /* NetworkManager.framework */,
 				CE3281426B3220454D33C43D /* Pods_Booking.framework */,
@@ -393,7 +397,8 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -402,7 +407,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

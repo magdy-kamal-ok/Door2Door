@@ -7,28 +7,62 @@
 //
 
 import XCTest
+import RxSwift
 @testable import NetworkManager
 
 class NetworkManagerTests: XCTestCase {
-
+    var sut: EventDataProvider<CarModel>?
+    let disposeBag = DisposeBag()
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
     }
 
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        sut = nil
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEventRequestManagerSuccessful()
+    {
+        let requestFactory = RequestFactory.init(endPoint: "CarModelList")
+        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockSocketManager.init())
+        let expextation = expectation(description: "Success Event Manager")
+        var carModel: CarModel?
+        var currentError: Error?
+        sut?.execute()
+            .subscribe(onNext: {(car) in
+                    carModel = car
+                }, onError: { (error) in
+                    currentError = error
+                    expextation.fulfill()
+            }, onCompleted: {
+                expextation.fulfill()
+            }).disposed(by: disposeBag)
+        
+        wait(for: [expextation], timeout: 30)
+        XCTAssertNil(currentError)
+        XCTAssertNotNil(carModel)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testEventRequestManagerFailure()
+    {
+        let requestFactory = RequestFactory.init(endPoint: "ShapeList")
+        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockSocketManager.init())
+        let expextation = expectation(description: "Success Event Manager")
+        var carModel: CarModel?
+        var currentError: Error?
+        sut?.execute()
+            .subscribe(onNext: {(car) in
+                carModel = car
+            }, onError: { (error) in
+                currentError = error
+                expextation.fulfill()
+            }, onCompleted: {
+                expextation.fulfill()
+            }).disposed(by: disposeBag)
+        
+        wait(for: [expextation], timeout: 30)
+        XCTAssertNotNil(currentError)
+        XCTAssertNil(carModel)
+        
     }
-
 }
