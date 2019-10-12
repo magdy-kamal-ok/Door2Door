@@ -10,17 +10,18 @@ import Foundation
 
 extension Double {
 
-    var radians: Double{
+    /// convert degree to radians
+    var radians: Double {
         get
         {
             return self * .pi / 180.0
         }
     }
-    
-    var degrees: Double{
+    /// convert radians to degree
+    var degrees: Double {
         get
         {
-            return self * .pi / 180.0
+            return self * 180 / .pi
         }
     }
 }

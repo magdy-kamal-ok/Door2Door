@@ -53,6 +53,7 @@ target 'Booking' do
     target 'BookingTests' do
         commonFrameworks
         testFramWorks
+        networkFrameWork
     end
     commonFrameworks
     

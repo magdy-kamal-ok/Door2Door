@@ -9,6 +9,13 @@
 import Foundation
 
 
+/// this Enum for All BookingStatuses
+///
+/// - waitingForPickup: it is when waiting until have the ride
+/// - inVehicle: it represents that now the status is inside the car
+/// - droppedOff: it represents the destination dropoff status
+/// - closed: it represents that connection closed
+/// - disMissed: it represents that some error happens, and why the trip is dismissed and you can try again
 enum BookingStatus: String, Decodable {
     case waitingForPickup
     case inVehicle

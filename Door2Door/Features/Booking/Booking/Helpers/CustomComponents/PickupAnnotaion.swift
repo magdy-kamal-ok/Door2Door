@@ -7,12 +7,12 @@
 //
 
 import MapKit
-
+/// Custom Annotaion For PickupAnnotaion and it is made for fusture usage if needed to add any properties in Future
 class PickupAnnotaion: MKPointAnnotation {
     
     
 }
-
+/// Custom AnnotaionView For PickupAnnotaion
 class PickupAnnotaionView: MKAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {

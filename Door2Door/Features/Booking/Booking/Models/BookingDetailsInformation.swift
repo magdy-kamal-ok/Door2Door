@@ -7,8 +7,10 @@
 //
 
 import Foundation
+
+/// this Booking Details inforation for creating Booking information when booking is opened
 struct BookingDetailsInformation: Decodable {
-    
+
     let status: BookingStatus
     let vehicleLocation: Location
     let pickupLocation: Location

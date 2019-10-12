@@ -9,23 +9,23 @@
 import MapKit
 
 class IntermediateStopAnnotaion: MKPointAnnotation {
-    
-    
-}
 
+
+}
+/// Custom AnnotaionView For ntermediateStopAnnotaion
 class IntermediateStopAnnotaionView: MKAnnotationView {
-    
-    
+
+
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         setupAnnotaionView()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupAnnotaionView()
     }
-    
+
     private func setupAnnotaionView() {
         self.image = UIImage.init(named: "stop-pin.png")
     }

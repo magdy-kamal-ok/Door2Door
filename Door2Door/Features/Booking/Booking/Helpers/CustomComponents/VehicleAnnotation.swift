@@ -8,8 +8,10 @@
 
 import MapKit
 
+/// Custom Annotaion For Vehicle Annotaion
 class VehicleAnnotation: MKPointAnnotation {
     
+    /// refrence for annotaionView to easly update the bearing Angle, and weak for avoiding retain Cycle
     weak var annotationView: VehicleAnnotationView?
     
     var bearing: Double? {
@@ -19,6 +21,7 @@ class VehicleAnnotation: MKPointAnnotation {
     }
 }
 
+/// Custom AnnotationView for Vehicle it contains imageView so i can change the rotaion angle based ong the bearing angle
 class VehicleAnnotationView: MKAnnotationView {
     
     private var imageView: UIImageView = {
@@ -51,6 +54,7 @@ class VehicleAnnotationView: MKAnnotationView {
         setupAnnotaionView()
     }
     
+    /// this for seting up the custom Views added to the customVehicleAnnotaionView
     private func setupAnnotaionView() {
         addSubview(imageView)
         

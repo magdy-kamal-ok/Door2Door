@@ -24,9 +24,12 @@
 		04267D91234D3ED100FBB072 /* DropoffAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */; };
 		04267D93234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */; };
 		04267DAD234D5FED00FBB072 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04267DAC234D5FED00FBB072 /* DoubleExtension.swift */; };
-		04288A1423514BDB00CDAE06 /* AnnotaionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */; };
 		04288A1C2351606E00CDAE06 /* Pods_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04288A1B2351606E00CDAE06 /* Pods_Booking.framework */; };
 		04288A1E2351607400CDAE06 /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04288A1D2351607400CDAE06 /* NetworkManager.framework */; };
+		04288A3D235208BA00CDAE06 /* BookingEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = 04288A3C235208BA00CDAE06 /* BookingEvents.json */; };
+		04288A4823520A9E00CDAE06 /* MockedSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A4723520A9E00CDAE06 /* MockedSocketManager.swift */; };
+		04288A4C23520F1100CDAE06 /* BookingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A4B23520F1100CDAE06 /* BookingViewModelTests.swift */; };
+		04288A5023521C4E00CDAE06 /* NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04288A4F23521C4E00CDAE06 /* NetworkManager.framework */; };
 		045748EF234BFB3C00DEF29B /* MapViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045748EE234BFB3C00DEF29B /* MapViewExtension.swift */; };
 		13F1C31D4038F5ECDDDA5C16 /* Pods_Booking_BookingTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B2313C8079B1F3BE2E447DC /* Pods_Booking_BookingTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,9 +67,13 @@
 		04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropoffAnnotaion.swift; sourceTree = "<group>"; };
 		04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntermediateStopAnnotaion.swift; sourceTree = "<group>"; };
 		04267DAC234D5FED00FBB072 /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
-		04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotaionFactory.swift; sourceTree = "<group>"; };
 		04288A1B2351606E00CDAE06 /* Pods_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04288A1D2351607400CDAE06 /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04288A3C235208BA00CDAE06 /* BookingEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BookingEvents.json; sourceTree = "<group>"; };
+		04288A4723520A9E00CDAE06 /* MockedSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedSocketManager.swift; sourceTree = "<group>"; };
+		04288A4B23520F1100CDAE06 /* BookingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingViewModelTests.swift; sourceTree = "<group>"; };
+		04288A4F23521C4E00CDAE06 /* NetworkManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NetworkManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04288A5123521C6B00CDAE06 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		045748EE234BFB3C00DEF29B /* MapViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewExtension.swift; sourceTree = "<group>"; };
 		0E2DF4B98ECDD6DCDD22350E /* Pods-Booking-BookingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking-BookingTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking-BookingTests/Pods-Booking-BookingTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29FE8D986E718B96A8E4C325 /* Pods-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Booking.release.xcconfig"; path = "../../../Pods/Target Support Files/Pods-Booking/Pods-Booking.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04288A5023521C4E00CDAE06 /* NetworkManager.framework in Frameworks */,
 				04267290234A5A6C003F5D46 /* Booking.framework in Frameworks */,
 				13F1C31D4038F5ECDDDA5C16 /* Pods_Booking_BookingTests.framework in Frameworks */,
 			);
@@ -136,7 +144,10 @@
 		04267293234A5A6C003F5D46 /* BookingTests */ = {
 			isa = PBXGroup;
 			children = (
+				04288A4623520A8700CDAE06 /* Mocks */,
+				04288A38235207F500CDAE06 /* Resources */,
 				04267294234A5A6C003F5D46 /* BookingTests.swift */,
+				04288A4B23520F1100CDAE06 /* BookingViewModelTests.swift */,
 				04267296234A5A6C003F5D46 /* Info.plist */,
 			);
 			path = BookingTests;
@@ -194,9 +205,24 @@
 				04267D8E234D3E5000FBB072 /* PickupAnnotaion.swift */,
 				04267D90234D3ED100FBB072 /* DropoffAnnotaion.swift */,
 				04267D92234D3F2F00FBB072 /* IntermediateStopAnnotaion.swift */,
-				04288A1323514BDB00CDAE06 /* AnnotaionFactory.swift */,
 			);
 			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		04288A38235207F500CDAE06 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				04288A3C235208BA00CDAE06 /* BookingEvents.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		04288A4623520A8700CDAE06 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				04288A4723520A9E00CDAE06 /* MockedSocketManager.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		045748ED234BFB2100DEF29B /* Extensions */ = {
@@ -222,6 +248,8 @@
 		B6406DB0ED197FAEF3109ECF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04288A5123521C6B00CDAE06 /* Starscream.framework */,
+				04288A4F23521C4E00CDAE06 /* NetworkManager.framework */,
 				04288A1D2351607400CDAE06 /* NetworkManager.framework */,
 				04288A1B2351606E00CDAE06 /* Pods_Booking.framework */,
 				042672E0234A698A003F5D46 /* Starscream.framework */,
@@ -335,6 +363,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04288A3D235208BA00CDAE06 /* BookingEvents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +426,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 			);
@@ -407,6 +437,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 			);
@@ -434,7 +465,6 @@
 				04267D91234D3ED100FBB072 /* DropoffAnnotaion.swift in Sources */,
 				042672D4234A5B42003F5D46 /* BookingStatus.swift in Sources */,
 				042672E7234AD180003F5D46 /* BookingConstants.swift in Sources */,
-				04288A1423514BDB00CDAE06 /* AnnotaionFactory.swift in Sources */,
 				04267DAD234D5FED00FBB072 /* DoubleExtension.swift in Sources */,
 				04267D8F234D3E5000FBB072 /* PickupAnnotaion.swift in Sources */,
 			);
@@ -445,6 +475,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04267295234A5A6C003F5D46 /* BookingTests.swift in Sources */,
+				04288A4823520A9E00CDAE06 /* MockedSocketManager.swift in Sources */,
+				04288A4C23520F1100CDAE06 /* BookingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

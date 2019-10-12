@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import MapKit
 class BookingViewController: UIViewController {
-   
+    // Mark: - Outlets
     @IBOutlet weak var userLocationView: UIView!
     @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var activityLoader: UIActivityIndicatorView!
@@ -21,54 +21,57 @@ class BookingViewController: UIViewController {
     @IBOutlet weak var pickupAddressLbl: UILabel!
     @IBOutlet weak var statusValueLbl: UILabel!
     @IBOutlet weak var mapView: MKMapView!
-    var bookingViewModel: BookingViewModel!
-    let disposeBag = DisposeBag()
+    // Mark: - private variables
+    private var bookingViewModel: BookingViewModel!
+    private let disposeBag = DisposeBag()
     private var vehicleAnnotation = VehicleAnnotation()
     private var pickupAnnotation = PickupAnnotaion()
     private var dropOffAnnotation = DropoffAnnotaion()
     private var intermediateStopsAnnotations = [IntermediateStopAnnotaion]()
 
+    /// the Booking ViewController initializer, expecting to inject the ViewModel
+    ///
+    /// - Parameter viewModel: the viewModel that contains our business logic for ViewController
     init(with viewModel: BookingViewModel) {
         let bundel = Bundle(for: BookingViewController.self)
         super.init(nibName: "BookingViewController", bundle: bundel)
         self.bookingViewModel = viewModel
-
-
     }
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupMapView()
-        subscribeToBookingEvents()
-
+        self.subscribeToBookingEvents()
     }
-    
+
+    /// this function is to show or hide booking status view
     private func bindStatusView()
     {
         self.bookingViewModel
             .output
             .bookingStatus
-            .map{$0.isEmpty}
+            .map { $0.isEmpty }
             .bind(to: self.statusView.rx.isHidden)
             .disposed(by: self.disposeBag)
     }
-    
+
+    /// this function is to reset All Views in case received dismissed, or closed, and depends on reciving Empty String
     private func bindClosedConnectionAndDismissed()
     {
         self.bookingViewModel
             .output
             .bookingStatus
-            .map{$0.isEmpty}
+            .map { $0.isEmpty }
             .subscribe(onNext: { [weak self](status) in
-                guard let self = self else {return}
+                guard let self = self else { return }
                 if status
                 {
                     self.removeAllAnnotations()
                 }
             }).disposed(by: self.disposeBag)
     }
-    
+
+    /// this is to bind booking status value to the staus label
     private func bindBookingEventStatus()
     {
         self.bookingViewModel
@@ -77,6 +80,8 @@ class BookingViewController: UIViewController {
             .bind(to: self.statusValueLbl.rx.text)
             .disposed(by: self.disposeBag)
     }
+
+    /// this function is to show or hide booking status Btn
     private func bindBookingBtnStatus()
     {
         self.bookingViewModel
@@ -85,6 +90,7 @@ class BookingViewController: UIViewController {
             .bind(to: self.startBookingBtn.rx.isHidden)
             .disposed(by: self.disposeBag)
     }
+    /// this is to bind pickupLocationAddress to pickup label
     private func bindPickupLocationAddress()
     {
         self.bookingViewModel
@@ -94,6 +100,7 @@ class BookingViewController: UIViewController {
             .bind(to: self.pickupAddressLbl.rx.text)
             .disposed(by: self.disposeBag)
     }
+    /// this is to bind dropoffLocationAddress to dropoff label
     private func bindDropOffLocationAddress()
     {
         self.bookingViewModel
@@ -103,6 +110,7 @@ class BookingViewController: UIViewController {
             .bind(to: self.dropoffAddressLbl.rx.text)
             .disposed(by: self.disposeBag)
     }
+    /// this function is to show or hide activityLoader
     private func bindActivityLoaderStatus()
     {
         self.bookingViewModel
@@ -111,6 +119,7 @@ class BookingViewController: UIViewController {
             .bind(to: self.activityLoader.rx.isAnimating)
             .disposed(by: self.disposeBag)
     }
+    /// this function is to show or hide user dropoff, pickup locations labels
     private func bindUserLocationViewStatus()
     {
         self.bookingViewModel
@@ -119,6 +128,7 @@ class BookingViewController: UIViewController {
             .bind(to: self.userLocationView.rx.isHidden)
             .disposed(by: self.disposeBag)
     }
+    /// this for binding IntermediateStopLocations to annotaions
     private func bindIntermediateStopLocations()
     {
         self.bookingViewModel
@@ -126,7 +136,6 @@ class BookingViewController: UIViewController {
             .intermediateStopLocations
             .subscribe(onNext: { [weak self] (intermediateStopLocations) in
                 guard let self = self else { return }
-                self.mapView.removeAnnotations(self.intermediateStopsAnnotations)
                 if let intermediateStopLocations = intermediateStopLocations
                 {
                     self.intermediateStopsAnnotations = intermediateStopLocations.map { location in
@@ -140,23 +149,22 @@ class BookingViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
+    /// this for binding VehicleLocation to annotaion
     private func bindVehicleLocation()
     {
         self.bookingViewModel
             .output
             .vehicleLocation
             .subscribe(onNext: { [weak self] (location) in
-                
                 guard let self = self else { return }
                 self.handleUpdatedLocation(location: location, type: .vehicle)
-                
-                
             })
             .disposed(by: disposeBag)
     }
+    /// this for binding PickupLocation to annotaion
     private func bindPickupLocation()
     {
-        
+
         self.bookingViewModel
             .output
             .pickupLocation
@@ -166,20 +174,21 @@ class BookingViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
+
+    /// this for binding DropOffLocation to annotaion
     private func bindDropOffLocation()
     {
         self.bookingViewModel
             .output
             .dropOffLocation
             .subscribe(onNext: { [weak self] (location) in
-                
                 guard let self = self else { return }
                 self.handleUpdatedLocation(location: location, type: .dropoff)
-                
-                
             })
             .disposed(by: disposeBag)
     }
+
+    /// this function is to start all binding needed
     private func subscribeToBookingEvents()
     {
         self.bindBookingEventStatus()
@@ -196,6 +205,11 @@ class BookingViewController: UIViewController {
         self.bindUserLocationViewStatus()
     }
 
+    /// this func is to add locations on map as annnotaion based on type provided
+    ///
+    /// - Parameters:
+    ///   - location: location of the annotaion
+    ///   - type: type of the location to be added to annotaion
     private func handleUpdatedLocation(location: Location?, type: LocationType)
     {
         switch type {
@@ -210,11 +224,10 @@ class BookingViewController: UIViewController {
 
         case .vehicle:
             if let vehicleLocation = location {
-                
                 mapView?.addAnnotation(vehicleAnnotation)
-                UIView.animate(withDuration: 1.5, animations: {
+                UIView.animate(withDuration: 2.0, animations: {
                     [weak self] in
-                    guard let self = self else{return}
+                    guard let self = self else { return }
                     self.vehicleAnnotation.coordinate = CLLocationCoordinate2D.init(latitude: vehicleLocation.latitude, longitude: vehicleLocation.longitude)
                     self.vehicleAnnotation.bearing = vehicleLocation.bearing
                     self.mapView.adjustMapZoomToAnnotaionsLocations(animated: true)
@@ -235,6 +248,8 @@ class BookingViewController: UIViewController {
 
 
     }
+
+    /// setup MapView Annotaions and delegate
     func setupMapView() {
         mapView.register(PickupAnnotaionView.self)
         mapView.register(DropoffAnnotaionView.self)
@@ -243,7 +258,7 @@ class BookingViewController: UIViewController {
         mapView.delegate = self
     }
 
-
+    ///  this functiontriggered when the status btn is touch up inside
     @IBAction func startBookingClick(_ sender: UIButton)
     {
         self.bookingViewModel.getLiveEvents()
@@ -253,6 +268,8 @@ class BookingViewController: UIViewController {
     }
 
 }
+
+// MARK: - this for MapKit delegate to set annotaionview per specified Annotaion
 extension BookingViewController: MKMapViewDelegate {
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -274,7 +291,8 @@ extension BookingViewController: MKMapViewDelegate {
         }
         return annotationView
     }
-    
+
+    /// remove all annotaions except user pickup Location
     func removeAllAnnotations() {
         let annotations = mapView.annotations.filter {
             $0 !== self.pickupAnnotation

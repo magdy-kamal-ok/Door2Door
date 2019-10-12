@@ -1,0 +1,40 @@
+
+[
+    {"event":"bookingOpened","data":{"status":"waitingForPickup","vehicleLocation":{"address":null,"lng":13.426789,"lat":52.519061},"pickupLocation":{"address":"Volksbühne Berlin","lng":13.411632,"lat":52.52663},"dropoffLocation":{"address":"Gendarmenmarkt","lng":13.393208,"lat":52.513763},"intermediateStopLocations":[{"address":"The Sixties Diner","lng":13.399356,"lat":52.523728},{"address":"Friedrichstraße Station","lng":13.388238,"lat":52.519485}]}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.423404693603516,"lat":52.520046627821515}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.42179536819458,"lat":52.520542777574015}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.41982126235962,"lat":52.52114337240909}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388718366622925,"lat":52.51725241668922}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388729095458983,"lat":52.517236094840456}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388723731040955,"lat":52.51722303735709}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388745188713074,"lat":52.5170369677975}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.38882029056549,"lat":52.51660933126173}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388900756835938,"lat":52.51614904606482}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.388970494270325,"lat":52.51574425226143}}
+    
+    , {"event":"statusUpdated","data":"inVehicle"}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.393186926841736,"lat":52.51387366472189}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.393192291259766,"lat":52.51383448926242}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.393192291259766,"lat":52.51381163689495}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.393192291259766,"lat":52.513788784515576}}
+    
+    , {"event":"vehicleLocationUpdated","data":{"address":null,"lng":13.393197655677795,"lat":52.51376919675238}}
+    
+    , {"event":"statusUpdated","data":"droppedOff"}
+    
+    , {"event":"bookingClosed","data":null}
+]
