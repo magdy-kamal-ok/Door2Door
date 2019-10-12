@@ -23,14 +23,14 @@ class RequestFactoryTests: XCTestCase {
 
     func testRequestFactoryEndPointSuccess()
     {
-        XCTAssert(sut?.getSocketEndPoint()==endPint)
+        XCTAssert(sut?.getSocketEndPoint() == endPint)
     }
     func testRequestFactoryEndPointFailure()
     {
         sut = nil
         XCTAssertNotEqual(sut?.getSocketEndPoint(), endPint)
     }
-    
-    
+
+
 
 }

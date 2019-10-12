@@ -8,18 +8,20 @@
 
 import Foundation
 
+
+/// this factory is made for easily initializing in case of adding different methods for RequstHandlerProtocol
 public struct RequestFactory: RequstHandlerProtocol {
 
-    
+
     var endPoint: String
-    
+
     public init(endPoint: String)
     {
         self.endPoint = endPoint
     }
-    
+
     public func getSocketEndPoint() -> String {
         return self.endPoint
     }
-   
+
 }

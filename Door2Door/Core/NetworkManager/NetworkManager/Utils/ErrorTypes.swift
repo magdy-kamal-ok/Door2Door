@@ -8,19 +8,19 @@
 
 import Foundation
 
-enum LocalError: Error {
+public enum LocalError: Error {
     
     case connectionClosed
     case timeOut
     case parsingFailure
-    var localizedDescription: String {
+    public var localizedDescription: String {
         switch self {
         case .connectionClosed: return "Connection Closed"
         case .timeOut: return "Time out"
         case .parsingFailure: return "Parsing Failure"
         }
     }
-    var errorCode:Int
+    public var errorCode:Int
     {
         switch self {
         case .connectionClosed: return LocalErrorCode.connectionClosed.rawValue
@@ -30,7 +30,7 @@ enum LocalError: Error {
     }
 }
 
-enum LocalErrorCode: Int {
+public enum LocalErrorCode: Int {
     
     case connectionClosed = 5000
     case timeOut = 5001

@@ -26,7 +26,7 @@
 		04288A2C2351652B00CDAE06 /* CarModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 04288A2B2351652B00CDAE06 /* CarModel.json */; };
 		04288A2E2351655300CDAE06 /* ShapeModel.json in Resources */ = {isa = PBXBuildFile; fileRef = 04288A2D2351655300CDAE06 /* ShapeModel.json */; };
 		04288A31235167D700CDAE06 /* RequestFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A30235167D700CDAE06 /* RequestFactoryTests.swift */; };
-		04288A332351692B00CDAE06 /* MockSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A322351692B00CDAE06 /* MockSocketManager.swift */; };
+		04288A332351692B00CDAE06 /* MockedSocketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A322351692B00CDAE06 /* MockedSocketManager.swift */; };
 		04288A352351741D00CDAE06 /* ShapeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04288A342351741D00CDAE06 /* ShapeModel.swift */; };
 		04288A3723517B2100CDAE06 /* ShapeList.json in Resources */ = {isa = PBXBuildFile; fileRef = 04288A3623517B2100CDAE06 /* ShapeList.json */; };
 		A0AAE119180E41441D492649 /* Pods_NetworkManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB142F2F5BD165545774C9E8 /* Pods_NetworkManager.framework */; };
@@ -66,7 +66,7 @@
 		04288A2B2351652B00CDAE06 /* CarModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CarModel.json; sourceTree = "<group>"; };
 		04288A2D2351655300CDAE06 /* ShapeModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShapeModel.json; sourceTree = "<group>"; };
 		04288A30235167D700CDAE06 /* RequestFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactoryTests.swift; sourceTree = "<group>"; };
-		04288A322351692B00CDAE06 /* MockSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSocketManager.swift; sourceTree = "<group>"; };
+		04288A322351692B00CDAE06 /* MockedSocketManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedSocketManager.swift; sourceTree = "<group>"; };
 		04288A342351741D00CDAE06 /* ShapeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeModel.swift; sourceTree = "<group>"; };
 		04288A3623517B2100CDAE06 /* ShapeList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ShapeList.json; sourceTree = "<group>"; };
 		044F375258380559AD025A79 /* Pods-NetworkManager-NetworkManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkManager-NetworkManagerTests.debug.xcconfig"; path = "../../../Pods/Target Support Files/Pods-NetworkManager-NetworkManagerTests/Pods-NetworkManager-NetworkManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,7 +238,7 @@
 		04288A2F235166F800CDAE06 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				04288A322351692B00CDAE06 /* MockSocketManager.swift */,
+				04288A322351692B00CDAE06 /* MockedSocketManager.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -475,7 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04288A332351692B00CDAE06 /* MockSocketManager.swift in Sources */,
+				04288A332351692B00CDAE06 /* MockedSocketManager.swift in Sources */,
 				04288A352351741D00CDAE06 /* ShapeModel.swift in Sources */,
 				04288A31235167D700CDAE06 /* RequestFactoryTests.swift in Sources */,
 				0426722E234A586F003F5D46 /* NetworkManagerTests.swift in Sources */,

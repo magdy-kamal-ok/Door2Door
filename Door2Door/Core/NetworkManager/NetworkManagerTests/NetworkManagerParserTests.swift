@@ -10,8 +10,8 @@ import XCTest
 @testable import NetworkManager
 class NetworkManagerParserTests: XCTestCase {
 
-    var sut:ParserProtocol!
-    
+    var sut: ParserProtocol!
+
     override func setUp() {
         sut = CodableParser.init()
     }
@@ -21,8 +21,8 @@ class NetworkManagerParserTests: XCTestCase {
     }
 
     func testParsingDataSuccessful() {
-        
-        let bundle =  Bundle(for: NetworkManagerTests.self)
+
+        let bundle = Bundle(for: NetworkManagerTests.self)
         let dataPath = bundle.url(forResource: "CarModel", withExtension: "json")
         let data = try! Data(contentsOf: dataPath!)
         var parsedCarModel: CarModel?
@@ -32,11 +32,11 @@ class NetworkManagerParserTests: XCTestCase {
         }
         XCTAssertNotNil(parsedCarModel)
         XCTAssert(parsedCarModel?.carNumber == 1)
-        
+
     }
     func testParsingDataFailure() {
         sut = CodableParser.init()
-        let bundle =  Bundle(for: NetworkManagerTests.self)
+        let bundle = Bundle(for: NetworkManagerTests.self)
         let dataPath = bundle.url(forResource: "ShapeModel", withExtension: "json")
         let data = try! Data(contentsOf: dataPath!)
         var parsedCarModel: CarModel?
@@ -45,7 +45,7 @@ class NetworkManagerParserTests: XCTestCase {
             parsedCarModel = carModel
         }
         XCTAssertNil(parsedCarModel)
-        
+
     }
 
 }

@@ -9,6 +9,6 @@
 import Foundation
 
 struct ShapeModel: Codable {
-    var shapeName:String
-    var Area:Int
+    var shapeName: String
+    var Area: Int
 }

@@ -8,8 +8,9 @@
 
 import Foundation
 
+/// for request handler components in case of endPoint, data to be sent to server, or any thing need to set for socket manager
 public protocol RequstHandlerProtocol {
-    
+
     func getSocketEndPoint() -> String
-  
+
 }

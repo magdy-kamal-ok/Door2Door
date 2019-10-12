@@ -8,61 +8,41 @@
 
 import XCTest
 import RxSwift
+import RxTest
+import RxBlocking
 @testable import NetworkManager
 
 class NetworkManagerTests: XCTestCase {
     var sut: EventDataProvider<CarModel>?
     let disposeBag = DisposeBag()
+    var testScheduler: TestScheduler?
     override func setUp() {
+        testScheduler = TestScheduler.init(initialClock: 0)
 
     }
 
     override func tearDown() {
         sut = nil
+        testScheduler?.stop()
     }
 
-    func testEventRequestManagerSuccessful()
-    {
+    func testEventRequestManagerSuccessful() {
+
         let requestFactory = RequestFactory.init(endPoint: "CarModelList")
-        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockSocketManager.init())
-        let expextation = expectation(description: "Success Event Manager")
-        var carModel: CarModel?
-        var currentError: Error?
-        sut?.execute()
-            .subscribe(onNext: {(car) in
-                    carModel = car
-                }, onError: { (error) in
-                    currentError = error
-                    expextation.fulfill()
-            }, onCompleted: {
-                expextation.fulfill()
-            }).disposed(by: disposeBag)
-        
-        wait(for: [expextation], timeout: 30)
-        XCTAssertNil(currentError)
-        XCTAssertNotNil(carModel)
+        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockedSocketManager.init())
+        testScheduler?.start()
+        let cars = try! sut?.execute().toBlocking().toArray()
+        XCTAssert(cars?.count == 10)
     }
-    
+
+
     func testEventRequestManagerFailure()
     {
         let requestFactory = RequestFactory.init(endPoint: "ShapeList")
-        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockSocketManager.init())
-        let expextation = expectation(description: "Success Event Manager")
-        var carModel: CarModel?
-        var currentError: Error?
-        sut?.execute()
-            .subscribe(onNext: {(car) in
-                carModel = car
-            }, onError: { (error) in
-                currentError = error
-                expextation.fulfill()
-            }, onCompleted: {
-                expextation.fulfill()
-            }).disposed(by: disposeBag)
-        
-        wait(for: [expextation], timeout: 30)
-        XCTAssertNotNil(currentError)
-        XCTAssertNil(carModel)
-        
+        sut = EventDataProvider.init(requestHandler: requestFactory, socketManager: MockedSocketManager.init())
+        testScheduler?.start()
+        let cars = try? sut?.execute().toBlocking().toArray()
+        XCTAssertNil(cars)
+
     }
 }

@@ -9,6 +9,6 @@
 import Foundation
 
 struct CarModel: Codable {
-    var carName:String
-    var carNumber:Int
+    var carName: String
+    var carNumber: Int
 }

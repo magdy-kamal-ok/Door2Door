@@ -8,7 +8,11 @@
 
 import Foundation
 
+/// ResultModel is the enum used to describe result returned from socket Events
+///
+/// - success: represents the data successful recieved
+/// - Faliure: represents the error in case of any error happens
 public enum ResultModel<T:AnyObject> {
-    case success(T:Data)
+    case success(T: Data)
     case Faliure (ErrorModel)
 }

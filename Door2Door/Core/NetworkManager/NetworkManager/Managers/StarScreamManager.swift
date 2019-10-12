@@ -10,6 +10,10 @@ import Foundation
 import RxSwift
 import Starscream
 
+/// StarScreamManager is responsible for connecting to wesockets
+/// and emit the response data to the above layer as Data in case of success
+/// and Error in case of unsuccessful data recieved or connection error
+
 public class StarScreamManager: NetworkProtocol {
 
     public init() { }
@@ -21,7 +25,7 @@ public class StarScreamManager: NetworkProtocol {
             }
 
             let socket = WebSocket(url: URL(string: requestComponents.getSocketEndPoint())!)
-        
+            // this closure in case of Disconnection
             socket.onDisconnect = { (error: Error?) in
                 if let error = error as? WSError {
                     var customError: ErrorModel?
@@ -40,7 +44,7 @@ public class StarScreamManager: NetworkProtocol {
                     observer.onNext(ResultModel.Faliure(customError))
                 }
             }
-
+            // this closure in case of recieving Data as Text
             socket.onText = { message in
                 guard let data = message.data(using: .utf16) else {
                     let customError = ErrorModel(code: LocalError.parsingFailure.errorCode, message: LocalError.parsingFailure.localizedDescription, error: nil)
@@ -49,13 +53,13 @@ public class StarScreamManager: NetworkProtocol {
                 }
                 observer.onNext(ResultModel.success(T: data))
             }
-
+            // this closure in case of recieving Data as Data
             socket.onData = { data in
                 observer.onNext(ResultModel.success(T: data))
             }
-
+            // start connection
             socket.connect()
-           
+
             return Disposables.create {
                 socket.disconnect()
             }

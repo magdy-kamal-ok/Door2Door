@@ -8,8 +8,11 @@
 
 import Foundation
 
+/// Parser Protocol is made in case of using different Parser needed
+/// but in our case we will use Codable for now
+/// it is made for future extension
 public protocol ParserProtocol {
-    
-    func parseData<T:Codable>(data:Data) -> T?
+
+    func parseData<T:Codable>(data: Data) -> T?
 }
 
