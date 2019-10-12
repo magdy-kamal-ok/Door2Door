@@ -225,6 +225,7 @@ class BookingViewController: UIViewController {
         case .vehicle:
             if let vehicleLocation = location {
                 mapView?.addAnnotation(vehicleAnnotation)
+                // this animation is to make vehicle image to move somthly on map, not jumping
                 UIView.animate(withDuration: 2.0, animations: {
                     [weak self] in
                     guard let self = self else { return }
