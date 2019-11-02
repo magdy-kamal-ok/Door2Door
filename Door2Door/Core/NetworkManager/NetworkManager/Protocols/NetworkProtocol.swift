@@ -16,6 +16,6 @@ public protocol NetworkProtocol {
     ///
     /// - Parameter requestComponents: the data needed for the socket manger to connect to end point but until now all what we need is the EndPoint
     /// - Returns: the expected return value is Observable of ResultModel enum T represents 2 cases one for Data and the other is the  ErrorModel
-    func startConnection<T>(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel<T>>?
+    func startConnection(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel>?
 
 }

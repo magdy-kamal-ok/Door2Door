@@ -33,6 +33,38 @@ public class EventDataProvider <R:Codable> {
 
     }
 
+    /// this func is responsible for observing and start parser
+    ///
+    /// - Parameter observer: observer represents any observer i want to emits result to it
+    private func startObservering(observer: AnyObserver<R>)
+    {
+        if let observable: Observable<ResultModel> = self.startConnection(requestComponents: self.requestHandler)
+        {
+            observable.asObservable().subscribe({ (subObj) in
+
+                switch subObj
+                {
+                case .next(let responseData):
+                    let tupleResult = self.handleResult(response: responseData)
+                    if let error = tupleResult.1
+                    {
+                        observer.onError(error)
+                    }
+                    if let response = tupleResult.0
+                    {
+                        observer.onNext(response)
+                    }
+                case .error(let error):
+                    let error = self.handleError(error: error)
+                    observer.onError(error)
+
+                case .completed:
+                    observer.onCompleted()
+                }
+
+            }).disposed(by: self.bag)
+        }
+    }
 
     /// execute is the main function needed for observing the data
     ///
@@ -42,44 +74,18 @@ public class EventDataProvider <R:Codable> {
 
         return Observable.create { [weak self] observer in
             guard let self = self else { return Disposables.create { } }
-
-            if let observable: Observable<ResultModel<AnyObject>> = self.startConnection(requestComponents: self.requestHandler)
-            {
-                observable.subscribe({ (subObj) in
-
-                    switch subObj
-                    {
-                    case .next(let responseData):
-                        let tupleResult = self.handleResult(response: responseData)
-                        if let error = tupleResult.1
-                        {
-                            observer.onError(error)
-                        }
-                        if let response = tupleResult.0
-                        {
-                            observer.onNext(response)
-                        }
-                    case .error(let error):
-                        let error = self.handleError(error: error)
-                        observer.onError(error)
-
-                    case .completed:
-                        observer.onCompleted()
-                    }
-
-                }).disposed(by: self.bag)
-            }
+            self.startObservering(observer: observer)
             return Disposables.create {
 
             }
         }
     }
 
-    /// this function is to handle ResultModel Cases
-    ///
-    /// - Parameter response: is of type Result Model
-    /// - Returns: it reeturn Tuple of ExpectedData:R, or error in case of there is one
-    private func handleResult(response: ResultModel<AnyObject>) -> (R?, Error?)
+/// this function is to handle ResultModel Cases
+///
+/// - Parameter response: is of type Result Model
+/// - Returns: it reeturn Tuple of ExpectedData:R, or error in case of there is one
+    private func handleResult(response: ResultModel) -> (R?, Error?)
     {
         switch response {
         case .Faliure(let error):
@@ -89,10 +95,10 @@ public class EventDataProvider <R:Codable> {
         }
     }
 
-    /// this function is responsible for calling the parsing Method of the parser
-    ///
-    /// - Parameter data: is the data recieved for the socket manager as response
-    /// - Returns: it return Tuple of ExpectedData:R, or error in case of there is one
+/// this function is responsible for calling the parsing Method of the parser
+///
+/// - Parameter data: is the data recieved for the socket manager as response
+/// - Returns: it return Tuple of ExpectedData:R, or error in case of there is one
     private func handleSuccessData(data: Data) -> (R?, Error?)
     {
         if let parsedObject: R = self.parser.parseData(data: data)
@@ -110,10 +116,10 @@ public class EventDataProvider <R:Codable> {
 
     }
 
-    /// this function is for handling error if there is some error does not need to be emited to the above layer
-    ///
-    /// - Parameter error: it takes error as paramerter
-    /// - Returns: it returns error it might change the error message or any thing if ther is some Special Error
+/// this function is for handling error if there is some error does not need to be emited to the above layer
+///
+/// - Parameter error: it takes error as paramerter
+/// - Returns: it returns error it might change the error message or any thing if ther is some Special Error
     private func handleError(error: Error) -> Error
     {
         return error
@@ -124,8 +130,8 @@ public class EventDataProvider <R:Codable> {
 extension EventDataProvider: NetworkProtocol
 {
 
-    public func startConnection<T>(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel<T>>? where T: AnyObject {
-        if let objObserve: Observable<ResultModel<T>> = socketManager.startConnection(requestComponents: self.requestHandler)
+    public func startConnection(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel>? {
+        if let objObserve: Observable<ResultModel> = socketManager.startConnection(requestComponents: self.requestHandler)
         {
             return objObserve
         }

@@ -18,7 +18,7 @@ public class StarScreamManager: NetworkProtocol {
 
     public init() { }
 
-    public func startConnection<T>(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel<T>>? where T: AnyObject {
+    public func startConnection(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel>? {
         return Observable.create { [weak self] observer in
             guard let _ = self else {
                 return Disposables.create { }
@@ -51,11 +51,11 @@ public class StarScreamManager: NetworkProtocol {
                     observer.onNext(ResultModel.Faliure(customError))
                     return
                 }
-                observer.onNext(ResultModel.success(T: data))
+                observer.onNext(ResultModel.success(data))
             }
             // this closure in case of recieving Data as Data
             socket.onData = { data in
-                observer.onNext(ResultModel.success(T: data))
+                observer.onNext(ResultModel.success(data))
             }
             // start connection
             socket.connect()

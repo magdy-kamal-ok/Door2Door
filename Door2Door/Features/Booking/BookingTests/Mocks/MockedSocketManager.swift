@@ -11,7 +11,7 @@ import RxSwift
 import NetworkManager
 
 class MockedSocketManager: NetworkProtocol {
-    func startConnection<T>(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel<T>>? where T : AnyObject {
+    func startConnection(requestComponents: RequstHandlerProtocol) -> Observable<ResultModel>? {
         let bundle = Bundle(for: MockedSocketManager.self)
         let dataPath = bundle.url(forResource: requestComponents.getSocketEndPoint(), withExtension: "json")
         return Observable.create { observer in
@@ -35,7 +35,7 @@ class MockedSocketManager: NetworkProtocol {
             return Observable<Int>
                 .timer(.seconds(2), period: .nanoseconds(10), scheduler: MainScheduler.instance)
                 .takeWhile { $0 < listData.count }
-                .map { ResultModel.success(T: listData[$0]) }
+                .map { ResultModel.success(listData[$0]) }
                 .subscribe(observer)
         }
     }
